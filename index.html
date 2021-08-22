@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<html>
+<body>
+<center>
+ <input type="number" id="bpm" value="140" min="0" max="280" style="display: block;margin: auto;text-align: center;width:356px;height:25px;touch-action: manipulation;font-size:15px;"> 
+</center>
+<center> 
+<button id="tool" onclick="var ele = document.getElementById('tool');
+    if (ele.innerHTML =='step-edit') ele.innerHTML = 'free-mode';
+    else ele.innerHTML = 'step-edit';">step-edit</button><button id="tool">keyboard</button><button id="tool">double</button><button id="tool" onclick="var elem = document.getElementById('tool');
+    if (elem.innerHTML =='tool') elem.innerHTML = 'trim';if (elem.innerHTML =='trim') elem.innerHTML = 'fx';if (elem.innerHTML =='fx') elem.innerHTML = '▶';if (elem.innerHTML =='▶') elem.innerHTML = '⏸';if (elem.innerHTML =='⏸') elem.innerHTML = '⏮';if (elem.innerHTML =='⏮') elem.innerHTML = '⏭';
+    else elem.innerHTML = 'tool';">tool</button>
+</center>
+<center> 
+<button>𝅝</button><button>𝅗𝅥</button><button>𝅘𝅥</button><button>𝅘𝅥𝅮</button><button>𝅘𝅥𝅯</button><button>𝅘𝅥𝅰</button><button>𝅘𝅥𝅱</button><button>𝅘𝅥𝅲</button>
+</center>
+
+
+
+<canvas id="myCanvas"></canvas>
+
+  
+  
+  <div id="channel" style="position:absolute;width: 1440px;height: 118px;top:479px;touch-action: manipulation;" ontouchstart="sho(event)" ontouchmove="show(event)" ontouchend="shows(event)">
+
+<button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button>
+
+<input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text">
+
+
+  </div>
+   
+   
+   
+ <style>
+    
+              *:focus {
+     outline:none;
+  }   
+  
+                     * { margin: 0; padding: 0;}
+
+body, html { width:100%; overflow:hidden;  }
+   
+#myCanvas{
+   touch-action: manipulation;
+}
+  
+#tool {
+ 
+   font-size:15px;
+    position:relative;
+    width: 91px; 
+    height: 46px;
+    margin-left: -1px;
+  top: -1px
+    
+}
+  
+  
+button {
+   font-size:15px;
+     position:relative;
+    width: 46px; 
+    height: 46px;
+    margin-left: -1px;
+    top: -2px;
+    
+}
+   
+#tol { 
+ font-size:15px;
+     top: 0px;
+    position:relative;
+    width: 91px; 
+    height: 25px;
+    margin-top: 2px;
+    margin-left: -1px;
+  }
+  
+#pp {
+
+    font-size:15px;
+    position:relative;
+    top:-3px;
+    width: 87px;
+    height: 90px;
+    margin-left: -1px;
+    
+}
+  
+</style>
+
+<script>
+ var isol = 0;
+ var ttl = 0;
+ var xprev = 0;
+ var x = 0;
+var counter = 0;
+ var feel = ["red","red","red","red","red","red","red","red","red","red","red"];
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+c.width = window.innerWidth;
+c.height = window.innerWidth;
+c.style.position = "absolute";
+c.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  setInterval(function(){ 
+                                                               
+counter=0; 
+                                       
+                                                               
+ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
+
+ctx.beginPath();
+ctx.rect(counter/2, counter/2, (window.innerWidth)+counter, (window.innerWidth)+counter);
+ctx.fillStyle = feel[0];
+ctx.fill();
+ctx.stroke();
+                                                               
+
+ctx.beginPath();
+ctx.rect(window.innerWidth/6-counter/2,window.innerWidth/6-counter/2,window.innerWidth-window.innerWidth/3+counter,window.innerWidth-window.innerWidth/3+counter);
+ctx.fillStyle = feel[1];
+ctx.fill();
+ctx.stroke();
+
+                                                                
+ctx.beginPath();                                                                
+ctx.rect(window.innerWidth/3-counter/2,window.innerWidth/3-counter/2,window.innerWidth-window.innerWidth/1.5+counter,window.innerWidth-window.innerWidth/1.5+counter);
+ctx.fillStyle = feel[2];
+ctx.fill();
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.rect(window.innerWidth/2-counter/2, window.innerWidth/2-counter/2, counter, counter);
+ctx.fillStyle = feel[3];
+ctx.fill();
+ctx.stroke();
+ 
+ 
+ 
+ 
+ }, (60000/140)/(window.innerWidth/2)  );
+ 
+ 
+ 
+  function sho(event) {
+  xprev = event.touches[0].clientX;
+  isol += ttl;
+}     
+ 
+ 
+ function show(event) {
+  x = event.touches[0].clientX;
+  ttl = (x-xprev);
+  
+  if((ttl+isol)>0){document.getElementById("channel").style.left="0px"} 
+  else if((ttl+isol)<-1080){document.getElementById("channel").style.left="-1080px"}
+  else { document.getElementById("channel").style.left = (ttl+isol) + "px"};
+  
+  
+}     
+ 
+  function shows(event) {
+
+}     
+ 
+</script>
+</body>
+</html>
