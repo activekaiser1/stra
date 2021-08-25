@@ -193,10 +193,16 @@ ctx.stroke();
 //if(ttl+isol<-1074){document.getElementById("channel").style.left="-1074px"};   
 //if(ttl+isol<-1077){document.getElementById("channel").style.left="-1077px"};
    
-   if(ttl+isol<-1){document.getElementById("channel").style.left="-359px"};
-if(ttl+isol<-359){document.getElementById("channel").style.left="-718px"};  
-if(ttl+isol<-718){document.getElementById("channel").style.left="-1074px"};   
-if(ttl+isol<-1077){document.getElementById("channel").style.left="-1077px"};   
+if(ttl+isol<-1){document.getElementById("channel").style.left="-359px"};
+if(ttl+isol<-360){document.getElementById("channel").style.left="-718px"};  
+if(ttl+isol<-719){document.getElementById("channel").style.left="-1074px"};   
+if(ttl+isol<-1077){document.getElementById("channel").style.left="-1077px"};
+
+if(ttl+isol>-360)document.getElementById("channel").style.left="0px"};
+if(ttl+isol>-719){document.getElementById("channel").style.left="-359px"};  
+if(ttl+isol>-1074){document.getElementById("channel").style.left="-719px"};   
+if(ttl+isol>-1077){document.getElementById("channel").style.left="-1074px"};   
+   
    
 }     
  
