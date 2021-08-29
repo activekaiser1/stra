@@ -179,7 +179,7 @@ ctx.stroke();
  
  function show(event) {
   x = event.touches[0].clientX;
-  ttl = (x-xprev)+slid;
+  ttl = (x-xprev);
   
   if((ttl)>0){document.getElementById("channel").style.left="0px"} 
   else if((ttl)<-1077){document.getElementById("channel").style.left="-1077px"}
@@ -190,14 +190,9 @@ ctx.stroke();
 }     
  
   function shows(event) {
-if(ttl<-1){document.getElementById("channel").style.left="-359px";slid=-0;};
-if(ttl<-360){document.getElementById("channel").style.left="-718px";slid=-359;};
-if(ttl<-719){document.getElementById("channel").style.left="-1077px";slid=-718;};  
-if(ttl<-1077){document.getElementById("channel").style.left="-1077px";slid=-1077;};   
 
 
-
-
+if(document.getElementById("channel").style.left< -1 + "px"){document.getElementById("channel").style.left="-1077px"};
    
 }    
  
