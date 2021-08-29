@@ -183,7 +183,7 @@ ctx.stroke();
   
   if((ttl+isol)>0){document.getElementById("channel").style.left="0px"} 
   else if((ttl+isol)<-1077){document.getElementById("channel").style.left="-1077px"}
-  else { document.getElementById("channel").style.left = (ttl) + "px"};
+  else { document.getElementById("channel").style.left = (ttl+slid) + "px"};
   
  
   
@@ -196,10 +196,10 @@ ctx.stroke();
 //if(ttl+isol<-1077){document.getElementById("channel").style.left="-1077px"};
    
 
-if(ttl+isol<1){document.getElementById("channel").style.left="-359px";};
-if(ttl+isol<-360){document.getElementById("channel").style.left="-718px";};  
-if(ttl+isol<-719){document.getElementById("channel").style.left="-1077px";};   
-if(ttl+isol<-1074){document.getElementById("channel").style.left="-1077px";}; 
+if(ttl+isol<1){document.getElementById("channel").style.left="-359px";slid=-359;};
+if(ttl+isol<-360){document.getElementById("channel").style.left="-718px";slid=-718;};  
+if(ttl+isol<-719){document.getElementById("channel").style.left="-1077px";slid=-1077;};   
+if(ttl+isol<-1074){document.getElementById("channel").style.left="-1077px";slid=-1077;}; 
 
 
    
