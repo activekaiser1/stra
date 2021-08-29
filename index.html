@@ -171,25 +171,35 @@ ctx.stroke();
  
  
  
-  function sho(event) {
+ function sho(event) {
   xprev = event.touches[0].clientX;
-
+  isol += ttl;
 }     
  
  
  function show(event) {
   x = event.touches[0].clientX;
-
-document.getElementById("channel").style.left = x + "px";
+  ttl = (x-xprev)+slid;
+  
+  if((ttl)>0){document.getElementById("channel").style.left="0px"} 
+  else if((ttl)<-1077){document.getElementById("channel").style.left="-1077px"}
+  else { document.getElementById("channel").style.left = (ttl+slid) + "px"};
   
  
   
 }     
  
   function shows(event) {
+if(ttl<-1){document.getElementById("channel").style.left="-359px";slid=-359;};
+if(ttl<-360){document.getElementById("channel").style.left="-718px";slid=-718;};
+if(ttl<-719){document.getElementById("channel").style.left="-1077px";slid=-1077;};  
+if(ttl<-1077){document.getElementById("channel").style.left="-1077px";slid=-1077;};   
+
+
+
 
    
-}     
+}    
  
 </script>
 </body>
