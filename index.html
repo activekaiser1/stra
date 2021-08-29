@@ -173,17 +173,15 @@ ctx.stroke();
  
   function sho(event) {
   xprev = event.touches[0].clientX;
-  isol += ttl;
+  //isol += ttl;
 }     
  
  
  function show(event) {
   x = event.touches[0].clientX;
-  ttl = (x-xprev);
+  //ttl = (x-xprev);
   
-  if((ttl+isol)>0){document.getElementById("channel").style.left="0px"} 
-  else if((ttl+isol)<-1077){document.getElementById("channel").style.left="-1077px"}
-  else { document.getElementById("channel").style.left = (ttl+slid) + "px"};
+document.getElementById("channel").style.left = (x) + "px"};
   
  
   
@@ -196,9 +194,6 @@ ctx.stroke();
 //if(ttl+isol<-1077){document.getElementById("channel").style.left="-1077px"};
    
 
-if(ttl+isol<-1){document.getElementById("channel").style.left="-359px";slid=-359;};
-if(ttl+isol<-359){document.getElementById("channel").style.left="-718px";slid=-718;};  
-if(ttl+isol<-719){document.getElementById("channel").style.left="-1077px";slid=-1077;};   
 
 
    
