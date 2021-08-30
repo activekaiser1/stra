@@ -183,10 +183,10 @@ ctx.stroke();
   
   
   
-  document.getElementById("channel").style.left = (slid+ttl+isol) + "px";
+
   if(document.getElementById("channel").style.left>"0px"){document.getElementById("channel").style.left="0px"}
   else if(document.getElementById("channel").style.left<"-1077px"){document.getElementById("channel").style.left="-1077px"}
-  else
+  else { document.getElementById("channel").style.left = (slid+ttl+isol) + "px"; };
  
  
   
