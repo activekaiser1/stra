@@ -108,11 +108,12 @@ body, html { width:100%; overflow:hidden;  }
 
 <script>
  var slid = 0;
- var isol = 0;
+ 
  var ttl = 0;
  var xprev = 0;
  var x = 0;
 var counter = 0;
+ var isol = 0;
  var feel = ["red","red","red","red","red","red","red","red","red","red","red"];
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
@@ -195,18 +196,12 @@ ctx.stroke();
   function shows(event) {
  
 
-if(ttl>0){
-     
-if(document.getElementById("channel").style.left<"0px"&&document.getElementById("channel").style.left>"-1077px"){ 
-isol+=359};
-    
+if(ttl>0&&document.getElementById("channel").style.left<"0px"&&document.getElementById("channel").style.left>"-1077px"){
+isol+=359
 };
    
-if(ttl<0){
-     
-if(document.getElementById("channel").style.left<"0px"&&document.getElementById("channel").style.left>"-1077px"){ 
-isol-=359};
-     
+if(ttl<0&&document.getElementById("channel").style.left<"0px"&&document.getElementById("channel").style.left>"-1077px"){
+isol-=359
 };
 
  
