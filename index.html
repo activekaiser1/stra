@@ -181,11 +181,11 @@ ctx.stroke();
   x = event.touches[0].clientX;
   ttl = (x-xprev);
   
-  document.getElementById("channel").style.left = (ttl+isol) + "px";
+
   
 
-  if(document.getElementById("channel").style.left>"0px"){document.getElementById("channel").style.left="0px"};
- if(document.getElementById("channel").style.left<"-1076px"){document.getElementById("channel").style.left="-1077px"};
+  if(document.getElementById("channel").style.left<"0px"){  document.getElementById("channel").style.left = (ttl+isol) + "px";};
+ if(document.getElementById("channel").style.left>"-1077px"){  document.getElementById("channel").style.left = (ttl+isol) + "px";};
   
  
  
