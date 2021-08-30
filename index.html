@@ -198,10 +198,12 @@ ctx.stroke();
 
 if(ttl>0){
 isol+=359
+ if(isol>0){isol=0;};
 };
    
 if(ttl<0){
 isol-=359
+  if(isol<-1077){isol=0;};
 };
 
 
@@ -209,10 +211,8 @@ isol-=359
 
 
   document.getElementById("channel").style.left = isol + "px";
-  if(document.getElementById("channel").style.left>"0px"){isol=0;};
-    
- if(document.getElementById("channel").style.left<"-1077px"){isol=-1077;};
- 
+  
+
 }    
  
 </script>
