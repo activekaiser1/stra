@@ -169,18 +169,18 @@ ctx.stroke();
  
  }, (60000/140)/(window.innerWidth/2)  );
  
- document.getElementById("channel").style.left="-1077px";
+
  
  function sho(event) {
   xprev = event.touches[0].clientX;
-  isol += ttl;
+  //isol += ttl;
 }     
  
  
  function show(event) {
   x = event.touches[0].clientX;
   ttl = (x-xprev);
-  document.getElementById("channel").style.left = (ttl+slid) + "px";
+  document.getElementById("channel").style.left = (slid+ttl) + "px";
   if(document.getElementById("channel").style.left>"0px"){document.getElementById("channel").style.left="0px"}
     else if(document.getElementById("channel").style.left<"-1077px"){document.getElementById("channel").style.left="-1077px"}
 
