@@ -181,9 +181,11 @@ ctx.stroke();
   x = event.touches[0].clientX;
   ttl = (x-xprev);
   
-  if((ttl)>0){document.getElementById("channel").style.left="0px"} 
-  else if((ttl)<-1077){document.getElementById("channel").style.left="-1077px"}
-  else { document.getElementById("channel").style.left = (ttl+slid) + "px"};
+  
+  if(document.getElementById("channel").style.left>"0px"){document.getElementById("channel").style.left="0px"};
+    if(document.getElementById("channel").style.left<"-1077px"){document.getElementById("channel").style.left="-1077px"};
+
+document.getElementById("channel").style.left = (ttl+slid) + "px"};
   
  
   
