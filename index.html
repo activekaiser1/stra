@@ -181,9 +181,6 @@ ctx.stroke();
   x = event.touches[0].clientX;
   ttl = (x-xprev);
   
-  if(document.getElementById("channel").style.left<"-1px"){slid=-359;}
-if(document.getElementById("channel").style.left<"-360px"){slid=-718;}
-
   
   
   document.getElementById("channel").style.left = (slid+ttl) + "px";
@@ -197,7 +194,7 @@ if(document.getElementById("channel").style.left<"-360px"){slid=-718;}
 }     
  
   function shows(event) {
-
+alert(slid+ttl);
 
 if(document.getElementById("channel").style.left<"-1px"){document.getElementById("channel").style.left="-359px";slid=-359;}
 if(document.getElementById("channel").style.left<"-360px"){document.getElementById("channel").style.left="-718px";slid=-718;}
