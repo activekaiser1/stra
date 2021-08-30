@@ -206,9 +206,9 @@ isol-=359
 
 
    
-  if(document.getElementById("channel").style.left<"0px"){isol=0;};
+  if(document.getElementById("channel").style.left>"0px"){isol=0;};
     
- if(document.getElementById("channel").style.left>"-1077px"){isol=-1077;};
+ if(document.getElementById("channel").style.left<"-1077px"){isol=-1077;};
 
   document.getElementById("channel").style.left = isol + "px";
 
