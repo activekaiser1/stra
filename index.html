@@ -194,18 +194,19 @@ ctx.stroke();
  
   function shows(event) {
  
-   if(isol<0&&isol>-1077){
+  
     if(ttl>0){isol+=359};
     if(ttl<0){isol-=359};
-   };
+   
    
  
    
  
 
 
-   
+    if(isol<0&&isol>-1077){
   document.getElementById("channel").style.left = isol + "px";
+    };
 }    
  
 </script>
