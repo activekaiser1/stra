@@ -194,12 +194,13 @@ ctx.stroke();
  
   function shows(event) {
  
- 
+   if(isol>0){isol=0};
+   if(isol<-1077){isol=-1077};
+   
   if(ttl>0){isol+=359};
   if(ttl<0){isol-=359};
    
-   if(isol>0){isol=0};
-   if(isol<-1077){isol=-1077};
+ 
 
 
    
