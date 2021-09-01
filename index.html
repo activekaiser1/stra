@@ -27,7 +27,6 @@
 <button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button>
 
 <input readonly id="pp" type="text" style="background:blue"><input readonly id="pp" type="text" style="background:blue"><input readonly id="pp" type="text"style="background:blue"><input readonly id="pp" type="text" style="background:blue"><input readonly id="pp" type="text" style="background:cyan"><input readonly id="pp" type="text" style="background:cyan"><input readonly id="pp" type="text" style="background:cyan"><input readonly id="pp" type="text" style="background:cyan"><input readonly id="pp" type="text" style="background:magenta"><input readonly id="pp" type="text" style="background:magenta"><input readonly id="pp" type="text" style="background:magenta"><input readonly id="pp" type="text" style="background:magenta"><input readonly id="pp" type="text" style="background:darkmagenta"><input readonly id="pp" type="text" style="background:darkmagenta"><input readonly id="pp" type="text" style="background:darkmagenta"><input readonly id="pp" type="text" style="background:darkmagenta">
-<input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text"><input readonly id="ppp" type="text">
 
   </div>
    
@@ -48,6 +47,7 @@ body, html { width:100%; overflow:hidden;  }
 }
   
 #tool {
+ border-style: solid; border-width: 1px;
  margin-left: -1px;
  left: 0.25px;
    font-size:15px;
@@ -59,6 +59,7 @@ body, html { width:100%; overflow:hidden;  }
 }
   
 #bb {
+ border-style: solid; border-width: 1px;
    left: 0.25px;
    font-size:15px;
      position:relative;
@@ -71,6 +72,7 @@ body, html { width:100%; overflow:hidden;  }
 
    
 #tol { 
+ border-style: solid; border-width: 1px;
  font-size:15px;
     position:relative;
     left: 1px;
@@ -81,28 +83,21 @@ body, html { width:100%; overflow:hidden;  }
   }
   
 #pp {
+     border-style: solid; border-width: 1px;
     z-index:1;
-    border-style: none;
+ 
     font-size:15px;
     position:relative;
     top:0px;
-    left:0px;
-    width: 88.75px;
+    left:1px;
+     width: 88.75px;
     height: 88.25px;
-    margin-left: 1px;
+     margin-top: -1px;
+    margin-left: -1px;
     
 }
   
-#ppp {
-    font-size:15px;
-    position:relative;
-   top:-88px;
-    left:1px;
-    width: 86.75px;
-    height: 85.25px;
-    margin-left: -1px;
-    
-}  
+
   
 </style>
 
